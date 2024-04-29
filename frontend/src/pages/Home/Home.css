@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3vw;
+}
+
+.home div {
+  background-color: lightgrey;
+  padding: 2vw;
+}
