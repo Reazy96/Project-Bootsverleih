@@ -29,6 +29,7 @@ const BootDetail = () => {
         <p>Material: {singleBoot?.Material}</p>
         <p>Seriennummer: {singleBoot?.Seriennummer}</p>
         <p>Baujahr: {singleBoot?.Baujahr}</p>
+        {/* <DeleteBoote /> */}
       </div>
     </section>
   );
