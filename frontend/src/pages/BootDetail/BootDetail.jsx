@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./BootDetail.css";
 import { useParams } from "react-router-dom";
+import DeleteBoote from "../../components/DeleteBoote/DeleteBoote";
+import EditBoote from "../../components/EditBoote/EditBoote";
 
 const BootDetail = () => {
   // * State um bestimmtes Boot darin zu speichern
@@ -29,7 +31,8 @@ const BootDetail = () => {
         <p>Material: {singleBoot?.Material}</p>
         <p>Seriennummer: {singleBoot?.Seriennummer}</p>
         <p>Baujahr: {singleBoot?.Baujahr}</p>
-        {/* <DeleteBoote /> */}
+        <DeleteBoote bootId={bootId} />
+        <EditBoote bootId={bootId} />
       </div>
     </section>
   );

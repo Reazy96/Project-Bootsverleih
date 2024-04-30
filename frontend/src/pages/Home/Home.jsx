@@ -31,10 +31,12 @@ const Home = () => {
 
   return (
     <section className="home">
-      <div>
-        <h3>Aktuelle Reservierungen:</h3>
-        <p>{allReservierungen.length}</p>
-      </div>
+      <Link to="/reservierung">
+        <div>
+          <h3>Aktuelle Reservierungen:</h3>
+          <p>{allReservierungen.length}</p>
+        </div>
+      </Link>
       <div>
         <h3>Verfügbaren Boote:</h3>
         <p>{allBoote.length - allReservierungen.length}</p>

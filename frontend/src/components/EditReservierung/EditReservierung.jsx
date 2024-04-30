@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./EditReservierung.css";
-import DeleteReservierungen from "../DeleteReservierungen/DeleteReservierungen";
 
 // wir holen uns über props das gemappte item, alle Reservierungen und den setter setReservierungen
 const EditReservierung = ({
