@@ -21,7 +21,10 @@ const AddReservierung = ({ setReservierungen }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        setReservierungen((prevReservierungen) => [...prevReservierungen, data]); // Füge die neue Reservierung zur aktuellen Liste hinzu
+        setReservierungen((prevReservierungen) => [
+          ...prevReservierungen,
+          data,
+        ]); // Füge die neue Reservierung zur aktuellen Liste hinzu
       })
       .catch((err) => console.log(err));
 
@@ -33,9 +36,21 @@ const AddReservierung = ({ setReservierungen }) => {
 
   return (
     <form>
-      <input type="date" value={addStart} onChange={(e) => setAddStart(e.target.value)} />
-      <input type="date" value={addEnd} onChange={(e) => setAddEnd(e.target.value)} />
-      <input type="text" value={addBoot} onChange={(e) => setAddBoot(e.target.value)} />
+      <input
+        type="date"
+        value={addStart}
+        onChange={(e) => setAddStart(e.target.value)}
+      />
+      <input
+        type="date"
+        value={addEnd}
+        onChange={(e) => setAddEnd(e.target.value)}
+      />
+      <input
+        type="text"
+        value={addBoot}
+        onChange={(e) => setAddBoot(e.target.value)}
+      />
       <button onClick={addClick}>Submit</button>
     </form>
   );

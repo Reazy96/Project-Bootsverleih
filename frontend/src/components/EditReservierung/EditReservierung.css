@@ -1,0 +1,7 @@
+.showEditForm {
+  display: block;
+}
+
+.notShowEditForm {
+  display: none;
+}
