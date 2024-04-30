@@ -88,9 +88,7 @@ app.get("/api/v1/reservierung/:reservierungsId", (req, res) => {
     .then((foundreservation) => res.json(foundreservation || {}))
     .catch((err) => {
       console.log(err);
-      res
-        .status(500)
-        .json({ err, message: "could not find reservation" + reservierungsId });
+      res.status(500).json({ err, message: "could not find reservation" + reservierungsId });
     });
 });
 
@@ -114,9 +112,7 @@ app.patch("/api/v1/reservierung/:reservierungsId", (req, res) => {
     .then((updatedReservation) => res.json(updatedReservation || {}))
     .catch((err) => {
       console.log(err);
-      res
-        .status(500)
-        .json({ err, message: "could not update the reservation" });
+      res.status(500).json({ err, message: "could not update the reservation" });
     });
 });
 
@@ -127,9 +123,7 @@ app.delete("/api/v1/reservierung/:reservierungsId", (req, res) => {
     .then((deletedreservation) => res.json(deletedreservation || {}))
     .catch((err) => {
       console.log(err);
-      res
-        .status(500)
-        .json({ err, message: "could not delete the reservation" });
+      res.status(500).json({ err, message: "could not delete the reservation" });
     });
 });
 
@@ -137,9 +131,7 @@ app.delete("/api/v1/reservierung/:reservierungsId", (req, res) => {
 connectToDb()
   .then(() => {
     const PORT = 3010;
-    app.listen(PORT, () =>
-      console.log(`Server ready at http://localhost:${PORT}`)
-    );
+    app.listen(PORT, () => console.log(`Server ready at http://localhost:${PORT}`));
   })
   .catch((err) => {
     console.log(err);
